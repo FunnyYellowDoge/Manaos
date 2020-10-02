@@ -51,7 +51,7 @@
 	/datum/mil_rank/sol/scientist, \
 	)
 
-/datum/map/torch
+/datum/map/nano
 	branch_types = list(
 		/datum/mil_branch/expeditionary_corps,
 		/datum/mil_branch/fleet,

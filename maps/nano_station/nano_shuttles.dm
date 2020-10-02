@@ -49,6 +49,31 @@ TORCH_ESCAPE_POD(9)
 TORCH_ESCAPE_POD(10)
 TORCH_ESCAPE_POD(11)
 
+//Petrov
+
+/datum/shuttle/autodock/ferry/petrov
+	name = "NTRL Polyp"
+	warmup_time = 10
+	dock_target = "petrov_shuttle_airlock"
+	waypoint_station = "nav_petrov_start"
+	waypoint_offsite = "nav_petrov_out"
+	logging_home_tag = "nav_petrov_start"
+	logging_access = access_petrov_helm
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling
+
+/datum/shuttle/autodock/ferry/petrov/New(_name, var/obj/effect/shuttle_landmark/initial_location)
+	shuttle_area = subtypesof(/area/shuttle/petrov)
+	..()
+
+/obj/effect/shuttle_landmark/petrov/start
+	name = "First Deck"
+	landmark_tag = "nav_petrov_start"
+	docking_controller = "petrov_shuttle_dock_airlock"
+
+/obj/effect/shuttle_landmark/petrov/out
+	name = "Space near the ship"
+	landmark_tag = "nav_petrov_out"
+
 //Ninja Shuttle.
 /datum/shuttle/autodock/multi/antag/ninja
 	destination_tags = list(
@@ -317,10 +342,52 @@ TORCH_ESCAPE_POD(11)
 	base_area = /area/quartermaster/hangar
 	base_turf = /turf/simulated/floor/plating
 
+/datum/shuttle/autodock/overmap/exploration_shuttle
+	name = "NTEV Gaunt"
+	move_time = 90
+	shuttle_area = list(/area/exploration_shuttle/cockpit, /area/exploration_shuttle/atmos, /area/exploration_shuttle/power, /area/exploration_shuttle/crew, /area/exploration_shuttle/cargo, /area/exploration_shuttle/airlock)
+	dock_target = "calypso_shuttle"
+	current_location = "nav_hangar_calypso"
+	landmark_transition = "nav_transit_calypso"
+	range = 1
+	fuel_consumption = 4
+	logging_home_tag = "nav_hangar_calypso"
+	logging_access = access_expedition_shuttle_helm
+
+/obj/effect/shuttle_landmark/torch/hangar/exploration_shuttle
+	name = "NTEV Gaunt Hangar"
+	landmark_tag = "nav_hangar_calypso"
+	base_area = /area/quartermaster/hangar
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/torch/deck1/exploration_shuttle
+	name = "Space near Forth Deck"
+	landmark_tag = "nav_deck1_calypso"
+
+/obj/effect/shuttle_landmark/torch/deck2/exploration_shuttle
+	name = "Space near Third Deck"
+	landmark_tag = "nav_deck2_calypso"
+
+/obj/effect/shuttle_landmark/torch/deck3/exploration_shuttle
+	name = "Space near Second Deck"
+	landmark_tag = "nav_deck3_calypso"
+
+/obj/effect/shuttle_landmark/torch/deck4/exploration_shuttle
+	name = "Space near First Deck"
+	landmark_tag = "nav_deck4_calypso"
+
+/obj/effect/shuttle_landmark/torch/deck5/exploration_shuttle
+	name = "Space near Bridge"
+	landmark_tag = "nav_bridge_calypso"
+
+/obj/effect/shuttle_landmark/transit/torch/exploration_shuttle
+	name = "In transit"
+	landmark_tag = "nav_transit_calypso"
+
 /datum/shuttle/autodock/overmap/guppy
-	name = "NTRP Femto"
-	warmup_time = 1
-	move_time = 10
+	name = "NTRP Garuda"
+	warmup_time = 5
+	move_time = 30
 	shuttle_area = /area/guppy_hangar/start
 	dock_target ="guppy_shuttle"
 	current_location = "nav_hangar_guppy"
@@ -361,3 +428,48 @@ TORCH_ESCAPE_POD(11)
 /obj/effect/shuttle_landmark/transit/torch/guppy
 	name = "In transit"
 	landmark_tag = "nav_transit_guppy"
+
+/datum/shuttle/autodock/overmap/aquila
+	name = "NTSC Byakhee"
+	move_time = 60
+	shuttle_area = list(/area/aquila/cockpit, /area/aquila/maintenance, /area/aquila/storage, /area/aquila/secure_storage, /area/aquila/mess, /area/aquila/passenger, /area/aquila/medical, /area/aquila/head, /area/aquila/airlock)
+	current_location = "nav_hangar_aquila"
+	landmark_transition = "nav_transit_aquila"
+	dock_target = "aquila_shuttle"
+	range = 2
+	logging_home_tag = "nav_hangar_aquila"
+	logging_access = access_aquila_helm
+
+/obj/effect/shuttle_landmark/torch/hangar/aquila
+	name = "NTSC Byakhee Hangar"
+	landmark_tag = "nav_hangar_aquila"
+	docking_controller = "aquila_shuttle_dock_airlock"
+	base_turf = /turf/simulated/floor/reinforced/airless
+
+/obj/effect/shuttle_landmark/torch/deck1/aquila
+	name = "Space near Forth Deck"
+	landmark_tag = "nav_deck1_aquila"
+
+/obj/effect/shuttle_landmark/torch/deck2/aquila
+	name = "Space near Third Deck"
+	landmark_tag = "nav_deck2_aquila"
+
+/obj/effect/shuttle_landmark/torch/deck3/aquila
+	name = "Space near Second Deck"
+	landmark_tag = "nav_deck3_aquila"
+
+/obj/effect/shuttle_landmark/torch/deck4/aquila
+	name = "Space near First Deck"
+	landmark_tag = "nav_deck4_aquila"
+
+/obj/effect/shuttle_landmark/torch/deck5/aquila
+	name = "Space near Bridge"
+	landmark_tag = "nav_bridge_aquila"
+
+/obj/effect/shuttle_landmark/transit/torch/aquila
+	name = "In transit"
+	landmark_tag = "nav_transit_aquila"
+
+//Makes the deck management program use hangar access
+/datum/nano_module/deck_management
+	default_access = list(access_hangar, access_cargo, access_heads)

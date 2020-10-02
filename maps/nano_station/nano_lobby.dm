@@ -1,4 +1,4 @@
-/datum/map/torch
+/datum/map/nano
 	lobby_screens = list('maps/torch/lobby/space.png','maps/torch/lobby/GreytideParadise.gif','maps/torch/lobby/Manaos.gif','maps/torch/lobby/bots.png')
 	lobby_tracks = list(
 		/music_track/domo,

@@ -1,6 +1,6 @@
-/obj/effect/overmap/visitable/ship/torch
-	name = "NTSS Dagon"
-	desc = "UnA bluespace-capable corvette bearing markings of the NanoTrasen Surveyor Corps."
+/obj/effect/overmap/visitable/ship/nano
+	name = "NTSS Nano"
+	desc = "Una estacion diminuta experimental de NT."
 	fore_dir = WEST
 	vessel_mass = 100000
 	burn_delay = 2 SECONDS

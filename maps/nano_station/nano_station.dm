@@ -183,7 +183,7 @@
 	#include "../away/skrellscoutship/skrellscoutship.dm"
 
 
-	#define using_map_DATUM /datum/map/torch
+	#define using_map_DATUM /datum/map/nano
 
 #elif !defined(MAP_OVERRIDE)
 
