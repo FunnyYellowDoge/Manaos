@@ -1,0 +1,41 @@
+/datum/map/nano
+	name = "Nano"
+	full_name = "NTSS Nano"
+	path = "nano"
+	flags = MAP_HAS_BRANCH | MAP_HAS_RANK
+
+	admin_levels = list(7,8)
+	empty_levels = list(9)
+	accessible_z_levels = list("1"=1, "9"=30)
+	overmap_size = 35
+	overmap_event_areas = 34
+	usable_email_tlds = list("nano.nt.exp", "nano.sec", "freemail.net", "nano.exp")
+
+	allowed_spawns = list("Cryogenic Storage", "Cyborg Storage")
+	default_spawn = "Cryogenic Storage"
+
+	station_name  = "NTSS Nano"
+	station_short = "NAno"
+	dock_name     = "TBD"
+	boss_name     = "Central Command"
+	boss_short    = "Central"
+	company_name  = "NanoTrasen"
+	company_short = "NT"
+
+	map_admin_faxes = list("Corporate Central Office")
+
+	//These should probably be moved into the evac controller...
+	shuttle_docked_message = "Atencion a todo el personal: la preparacion del salto esta completado. El motor bluespace se esta cargando, por favor aseguren todas las estaciones de salida. Tiempo para el salto: aproximadamente  %ETD%."
+	shuttle_leaving_dock = "Atencion a todo el personal: Salto iniciado, saliendo del bluespace en %ETA%."
+	shuttle_called_message = "Atencion a todo el personal: Secuencia de salto iniciada, los procedimientos de transito estan ahora en vigor. Salto en %ETA%."
+	shuttle_recall_message = "Atencion a todo el personal: Secuencia de salto abortada, regreso a las condiciones normales de operacion."
+
+	evac_controller_type = /datum/evacuation_controller/starship
+
+	default_law_type = /datum/ai_laws/nanotrasen
+	use_overmap = 1
+	num_exoplanets = 1
+
+	away_site_budget = 5
+	//id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
+	id_hud_icons = 'maps/torch/icons/assignment_hud_boh.dmi'
