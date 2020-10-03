@@ -1,15 +1,16 @@
 #if !defined(using_map_DATUM)
 
 	#include "nano_announcements.dm"
-	#include "nano_antagonism.dm"
+	#include "../torch/torch_antagonism.dm"
 	#include "nano_areas.dm"
+	#include "../torch/torch_areas.dm"
 	#include "nano_lobby.dm"
 	#include "../torch/torch_map_templates.dm"
 	#include "nano_overmap.dm"
 	#include "nano_presets.dm"
 	#include "nano_ranks.dm"
 	#include "nano_ranks_boh.dm"
-	#include "nano_security_state.dm"
+	#include "../torch/torch_security_state.dm"
 	#include "nano_setup.dm"
 	#include "nano_shuttles.dm"
 	#include "nano_unit_testing.dm"

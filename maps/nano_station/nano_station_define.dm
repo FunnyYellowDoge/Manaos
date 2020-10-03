@@ -39,3 +39,5 @@
 	away_site_budget = 5
 	//id_hud_icons = 'maps/torch/icons/assignment_hud.dmi'
 	id_hud_icons = 'maps/torch/icons/assignment_hud_boh.dmi'
+
+	security_state = /decl/security_state/default/torchdept
