@@ -157,8 +157,8 @@
 	#include "../torch/loadout/~defines.dm"
 
 	#include "nano_station.dmm"
-	#include "../torch/z1_admin.dmm"
-	#include "../torch/z2_transit.dmm"
+	#include "z1_admin_nano.dmm"
+	#include "z2_transit_nano.dmm"
 	#include "../torch/z3_espacio.dmm"
 	#include "../torch/z4_eventos.dmm"
 

@@ -13,7 +13,7 @@
 	return jointext(., "<br>")
 
 /datum/map/nano/send_welcome()
-	var/welcome_text = "<center><img src = bluentlogo.png /><br /><font size = 3><b>NTSS Dagon</b> Sensor Readings:</font><br>"
+	var/welcome_text = "<center><img src = bluentlogo.png /><br /><font size = 3><b>NTSS Nano</b> Sensor Readings:</font><br>"
 	welcome_text += "Reporte generado en [stationdate2text()] en [stationtime2text()]</center><br /><br />"
 	welcome_text += "<hr>Sistema actual:<br /><b>[system_name()]</b><br /><br>"
 
