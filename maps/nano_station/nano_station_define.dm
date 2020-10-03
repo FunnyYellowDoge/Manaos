@@ -15,7 +15,7 @@
 	default_spawn = "Cryogenic Storage"
 
 	station_name  = "NTSS Nano"
-	station_short = "NAno"
+	station_short = "Nano"
 	dock_name     = "TBD"
 	boss_name     = "Central Command"
 	boss_short    = "Central"
